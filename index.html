@@ -36,14 +36,82 @@
     <main>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae corporis dolores a vero fuga, repellat in
         aperiam corrupti eligendi quod alias vel labore nemo error voluptas aspernatur non explicabo! Labore.
-        <button>Test</button>
+        <hr />
+        <button onclick="console.log('Button Click!')">Test</button>
+        <button onclick="count()">Test Function</button>
+        <hr/>
+        <canvas id="draw1"></canvas>
+
+        </hr>
+        <hr />
+        <input type="button" value="Button from input">
+        <hr />
+        <input type="color" name="Culoare">
+        <hr />
+        <input type="date" name="Data">
+        <hr />
+        <input type="file" name="fisier">
+        <hr />
+        <label for="select1">Selecteaza 1</label>
+        <label for="select2">Selecteaza 2</label>
+        <input type="checkbox" name="select" value="Selecteaza 1">
+        <hr />
+        <label for="radio">Radio 1</label>
+        <input type="radio" name="radio1">
+        <label for="radio2">Radio2</label>
+        <input type="radio" name="radio2">
+        <hr />
+        <ul>
+            <li>Vlad</li>
+            <li>Denis</li>
+            <li>Cristi</li>
+        </ul>
+        <ol>
+            <li>Vlad</li>
+            <li>Denis</li>
+            <li>Cristi</li>
+        </ol>
+        <hr />
+        <img src="horse.jpg" alt="Horse" width="500">
+        <img src="https://www.birds.cornell.edu/home/wp-content/uploads/2023/09/334289821-Baltimore_Oriole-Matthew_Plante.jpg"
+            alt="Bird" width="500">
+        <hr />
+        <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic veritatis, excepturi, ea laboriosam pariatur
+            reprehenderit dicta maiores facere ipsam obcaecati deleniti porro ipsum autem iure aut nulla perferendis
+            beatae consequatur.
+        </div>
+        <hr />
     </main>
     <footer>
         Copyright &copy; 2024
     </footer>
 
+    <script>
+        console.log("salut");
+        let counter = 0;
+        function count() {
+            counter++;
+            console.log("salut din functie", counter);
+        }
+     const canvas=document.getElementById("draw1");
+     const ctx=canvas.getContext("2d");
+
+     ctx.fillStyle="red";
+     ctx.fillRect(10,10,150,100);
+    </script>
+
+
     <!--Adaugare fiesiere externe de JS  -->
     <script src="script.js"></script>
+    <!--Adaugare fisiere externe de JS prin module type-->
+    <script type="module" src="script-counter">
+        import { count } from "./script-counter-way.js";
+
+    </script>
+
+
+
 </body>
 
 </html>
